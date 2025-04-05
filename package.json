@@ -1,6 +1,6 @@
 {
     "scripts": {
-      "build-web": "cd client && npm install && npm run build && cd ../server && npm install && cd ..",
+      "build-web": "cd client && npm install && npm run build && cd ../server && npm install --production=false && cd ..",
       "start-web": "cd server && npm start"
     }
   }
