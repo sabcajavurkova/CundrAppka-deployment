@@ -18,7 +18,7 @@ const useCreateAd = () => {
       // retrieve a response containing success status
       const data = await response.json()
       // return the outcome
-      return { success: data.success }
+      return { success: data.success, ad: data.data }
     } catch {
       // if failed, return unsuccess
       return { success: false }

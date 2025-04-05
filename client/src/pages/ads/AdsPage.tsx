@@ -26,15 +26,18 @@ function AdsPage() {
     // when loading, display loading circle
     if (loadingAds || loadingUser) return <LoadingCircle/>
 
+    const myAdsIds = user?.ads || []
+    const notMineAds = ads.filter(ad => !myAdsIds.includes(ad._id))
+
     // sort post by their date in whatever way user chooses
-    ads.sort((a, b) => {
+    notMineAds.sort((a, b) => {
         const dateA = new Date(a.updatedAt).getTime()
         const dateB = new Date(b.updatedAt).getTime()
         return sortOrder === 'newest' ? dateB - dateA : dateA - dateB
     })
 
     // filter the post according to user-picked filters
-    const filteredAds = ads.filter(ad => {
+    const filteredAds = notMineAds.filter(ad => {
         // initialize variables with ages (if they are filled-out)
         const adMinAge = ad.preferences?.minAge ? Number(ad.preferences.minAge) : null
         const adMaxAge = ad.preferences?.maxAge ? Number(ad.preferences.maxAge) : null
@@ -129,7 +132,7 @@ function AdsPage() {
                     <div className="language-filter">
                         <p>Mluvíš:</p>
                         {/* make checkbox out of each language */}
-                        {['czech', 'spanish', 'english', 'russian', 'italian', 'german', 'french'].map((lang) => (
+                        {['czech', 'english', 'russian', 'german', 'spanish', 'italian', 'french'].map((lang) => (
                             <label key={lang}>
                                 <input
                                     type="checkbox"

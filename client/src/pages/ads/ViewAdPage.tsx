@@ -107,6 +107,12 @@ function ViewAdPage() {
       setSaved(newSavedState)
     }
 
+    let backLink = document.referrer
+    if (backLink.includes(ad._id)) {
+      backLink = '/muj-ucet/moje-inzeraty'
+      console.log('executed')
+    }
+
   return (
     <div className="vintage-container">
       <div className="vintage-card">
@@ -179,7 +185,7 @@ function ViewAdPage() {
               </div>
           )}
           <br />
-          <p><button onClick={() => navigate(-1)} className="back-button">Zpátky</button></p>
+          <p><a href={backLink} className='back-button'>Zpátky</a></p>
       </div>
 
       {/* modal that shows up when delete button is clicked */}

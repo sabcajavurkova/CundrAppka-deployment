@@ -138,7 +138,7 @@ function UpdateAdPage() {
         {/* spoken languages */}
         <div className="create-ad-languages">
           <p>Jakými jazyky mluvíš?</p>
-          {['czech', 'spanish', 'english', 'russian', 'italian', 'german', 'french'].map((lang) => (
+          {['czech', 'english', 'russian', 'german', 'spanish', 'italian', 'french'].map((lang) => (
             <label key={lang}>
               <input
                 type="checkbox"

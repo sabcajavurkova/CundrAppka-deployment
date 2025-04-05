@@ -50,12 +50,13 @@ function CreateAdPage() {
     setLoading(true)
     
     // call function for creating ads with data from form
-    const success = await createAd(adData as Ad)
+    const { success, ad } = await createAd(adData as Ad)
     setLoading(false)
     
     // once created and successful, redirect user to /inzeraty
     if (success) {
-      navigate('/inzeraty')
+      navigate(`/inzeraty/${ad._id}`)
+      window.location.reload()
     } else {
       // if anything went wrong there will be displayed error message
       alert('Nastal problém při vytváření inzerátu')
@@ -138,7 +139,7 @@ function CreateAdPage() {
         {/* spoken languages */}
         <div className="create-ad-languages">
           <p><strong>Jakými jazyky mluvíš?</strong></p>
-          {['czech', 'spanish', 'english', 'russian', 'italian', 'german', 'french'].map((lang) => (
+          {['czech', 'english', 'russian', 'german', 'spanish', 'italian', 'french'].map((lang) => (
             <label key={lang}>
               <input
                 type="checkbox"

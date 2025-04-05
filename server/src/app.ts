@@ -5,6 +5,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import session from 'express-session'
 import MongoStore from 'connect-mongo'
+import path from 'path'
 
 import { connectDB } from './config/db'
 import adRoutes from './routes/ads.route'
@@ -17,6 +18,9 @@ connectDB()
 
 // initializing app
 const app = express()
+
+const server_dir = path.resolve();
+const __dirname = path.resolve(server_dir, '..')
 
 // middleware
 app.use(morgan('dev'))
@@ -43,10 +47,18 @@ app.use('/api/ads', adRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/forum', forumRoutes)
 
-// endpoint not found
-app.use((req: Request, res: Response, next: NextFunction) => {
-  res.status(400).json({ message: 'Endpoint neexistuje' })
-})
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+} else {
+  // endpoint not found
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    res.status(400).json({ message: 'Endpoint neexistuje' })
+  })
+}
 
 // listening on port
 const PORT: number = parseInt(process.env.PORT || '8000', 10)

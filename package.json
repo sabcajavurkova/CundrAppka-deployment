@@ -1,0 +1,7 @@
+{
+    "scripts": {
+      "build-web": "cd client && npm install && npm run build && cd ../server && npm install && cd ..",
+      "start-web": "cd server && npm start"
+    }
+  }
+  

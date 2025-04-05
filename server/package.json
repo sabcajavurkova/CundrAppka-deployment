@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --watch . --ext \"ts,json,js,css,html\" --ignore \"node_modules/**\" --ignore \"dist/**\" --exec \"tsx src/app.ts\""
+    "start": "tsx src/app.ts"
   },
   "keywords": [],
   "author": "Sabina Javurkova",
