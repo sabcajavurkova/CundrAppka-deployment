@@ -1,6 +1,5 @@
 // import modules
 import express, { NextFunction, Request, Response } from 'express'
-import morgan from 'morgan'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import session from 'express-session'
@@ -23,7 +22,6 @@ const server_dir = path.resolve();
 const __dirname = path.resolve(server_dir, '..')
 
 // middleware
-app.use(morgan('dev'))
 app.use(cors())
 app.use(express.json())
 
