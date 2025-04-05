@@ -1,0 +1,239 @@
+.forum-container {
+    background: #fffaf0; 
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px dashed #c8b99d;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    min-height: 250px;
+    margin: 30px auto;
+}
+
+.forum-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a4634;
+    margin-bottom: 15px;
+}
+
+.forum-post-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #e6c9a8;
+    color: #5a4634;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid #d4c2a8;
+}
+
+.forum-post-btn:hover {
+    background: #d4c2a8;
+    color: white;
+}
+
+.forum-login-msg {
+    font-size: 1rem;
+    color: #5a4634;
+    margin-bottom: 15px;
+}
+
+.forum-cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.forum-city-link {
+    background-color: #f5e6d7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #d4c2a8;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5a4634;
+    transition: all 0.3s ease-in-out;
+}
+
+.forum-city-link:hover {
+    background: #d4c2a8;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.forum-city-container {
+    background: #fdf6e3; 
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #c8b99d;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin: 30px auto;
+}
+
+.forum-city-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a4634;
+    margin-bottom: 15px;
+}
+
+.forum-post-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #e6c9a8;
+    color: #5a4634;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid #d4c2a8;
+}
+
+.forum-post-btn:hover {
+    background: #d4c2a8;
+    color: white;
+}
+
+.forum-login-msg {
+    font-size: 1rem;
+    color: #5a4634;
+    margin-bottom: 15px;
+}
+
+.forum-search {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 2px solid #c8b99d;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fffaf0;
+}
+
+.forum-sort-container {
+    margin-bottom: 20px;
+}
+
+.forum-sort-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.forum-sort-dropdown {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #c8b99d;
+    background: #f5e6d7;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.forum-posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forum-post-card {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #d4c2a8;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.forum-post-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5a4634;
+}
+
+.forum-post-user {
+    font-size: 1rem;
+    color: #8d7765;
+}
+
+.forum-post-text {
+    margin: 10px 0;
+    color: #5a4634;
+    overflow: hidden;
+    flex-grow: 1; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+}
+
+.forum-post-date {
+    font-size: 0.9rem;
+    color: #8d7765;
+}
+
+.forum-no-posts {
+    font-size: 1.1rem;
+    color: #5a4634;
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+.forum-posting-container {
+    background: #fdf6e3;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #c8b99d;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.forum-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forum-input,
+.forum-textarea,
+.forum-select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c8b99d;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fffaf0;
+    color: #5c4033;
+}
+
+.forum-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.forum-button {
+    background: #6b4f3c;
+    color: #fffaf0;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.forum-button:hover {
+    background: #5a3e2c;
+}
