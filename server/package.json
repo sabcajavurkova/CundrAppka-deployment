@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "tsx src/app.ts"
+    "start": "npx tsx src/app.ts"
   },
   "keywords": [],
   "author": "Sabina Javurkova",
