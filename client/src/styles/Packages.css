@@ -156,3 +156,17 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .packages-page {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-page {
+    padding: 10px;
+    text-align: center;
+  }
+}
