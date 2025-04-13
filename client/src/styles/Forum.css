@@ -237,3 +237,59 @@
 .forum-button:hover {
     background: #5a3e2c;
 }
+
+@media (max-width: 768px) {
+    .forum-container,
+    .forum-city-container,
+    .forum-posting-container {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .forum-title,
+    .forum-city-title {
+        font-size: 1.5rem;
+    }
+
+    .forum-post-title {
+        font-size: 1.1rem;
+    }
+
+    .forum-search {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .forum-sort-dropdown {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .forum-post-btn {
+        padding: 6px 12px;
+        font-size: 0.95rem;
+    }
+
+    .forum-cities {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .forum-city-link {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+
+    .forum-input,
+    .forum-textarea,
+    .forum-select,
+    .forum-button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .forum-textarea {
+        height: 120px;
+    }
+}

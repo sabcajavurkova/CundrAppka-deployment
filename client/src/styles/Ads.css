@@ -422,3 +422,73 @@ color: #5a4634;
       font-size: 12px;
   }
 }
+
+@media (max-width: 768px) {
+  .filters {
+    padding: 10px 15px;
+    margin: 15px auto;
+    width: 95%;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-row input[type="text"],
+  .filter-row input[type="month"],
+  .filter-row input[type="number"],
+  .filter-row select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .language-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ads-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .vintage-paper-box {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .vintage-paper-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .vintage-paper-box p {
+    font-size: 0.95rem;
+  }
+
+  .vintage-container {
+    padding: 0 10px;
+  }
+
+  .vintage-card {
+    width: 100%;
+  }
+
+  .vintage-title {
+    font-size: 1.5rem;
+  }
+
+  .vintage-description {
+    font-size: 1rem;
+  }
+
+  .vintage-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vintage-preference-card {
+    font-size: 0.95rem;
+  }
+}
