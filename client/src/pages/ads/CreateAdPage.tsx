@@ -168,6 +168,7 @@ function CreateAdPage() {
           className="create-ad-input"
           onChange={(e) => setAdData({ ...adData, preferences: { ...adData.preferences, minAge: e.target.value } })}
           placeholder="Minimální věk"
+          type='number'
         />
         {/* max age preference */}
         <input
@@ -175,6 +176,7 @@ function CreateAdPage() {
           className="create-ad-input"
           onChange={(e) => setAdData({ ...adData, preferences: { ...adData.preferences, maxAge: e.target.value } })}
           placeholder="Maximální věk"
+          type='number'
         />
         {/* smoking preference */}
         <select

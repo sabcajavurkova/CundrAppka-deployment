@@ -170,6 +170,7 @@ function UpdateAdPage() {
           onChange={(e) => setFormData({ ...formData, preferences: { ...formData.preferences, minAge: e.target.value } })}
           placeholder="Minimální věk"
           className="create-ad-input"
+          type='number'
         />
         {/* max age preference */}
         <input
@@ -178,6 +179,7 @@ function UpdateAdPage() {
           onChange={(e) => setFormData({ ...formData, preferences: { ...formData.preferences, maxAge: e.target.value } })}
           placeholder="Maximální věk"
           className="create-ad-input"
+          type='number'
         />
         {/* smoking preference */}
         <select
